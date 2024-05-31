@@ -38,7 +38,5 @@ COPY start addclient /srv/
 RUN chmod 755 /srv/* \
     && apk add --no-cache wireguard-tools iptables net-tools libqrencode openresolv procps iproute2 grep
 
-HEALTHCHECK --interval=5s --timeout=5s CMD /sbin/ip -o li sh wg0 || exit 1
-
 # Entrypoint
 CMD [ "start" ]
