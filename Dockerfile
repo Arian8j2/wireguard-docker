@@ -31,12 +31,11 @@ VOLUME /etc/wireguard
 
 # Copy tools
 WORKDIR /etc/wireguard
-COPY start addclient /srv/
+COPY start /
 
 # Install WireGuard and dependencies
 # hadolint ignore=DL3008
-RUN chmod 755 /srv/* \
-    && apk add --no-cache wireguard-tools iptables net-tools libqrencode openresolv procps iproute2 grep
+RUN apk add --no-cache wireguard-tools iptables net-tools libqrencode openresolv procps iproute2 grep
 
 # Entrypoint
-CMD [ "start" ]
+CMD [ "/start" ]
