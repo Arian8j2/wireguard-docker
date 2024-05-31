@@ -30,7 +30,7 @@ ENV \
 VOLUME /etc/wireguard
 
 # Copy tools
-WORKDIR /srv
+WORKDIR /etc/wireguard
 COPY start addclient /srv/
 
 # Install WireGuard and dependencies
