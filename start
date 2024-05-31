@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Create a mark that the fork is being used
+touch /arian8j2-fork
+
 # Get public IP
 if [ -z "$PUBLIC_IP" ]
 then
