@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # Get public IP
-if [ "$PUBLIC_IP" = "1.2.3.4" ]
+if [ -z "$PUBLIC_IP" ]
 then
-    PUBLIC_IP=$(curl -s ifconfig.co)
+    PUBLIC_IP="publicip"
     export PUBLIC_IP
 fi
 
