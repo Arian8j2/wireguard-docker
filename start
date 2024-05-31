@@ -98,7 +98,7 @@ wg_up() {
     for NAME in /etc/wireguard/clients/*.pub
     do
         PUB=$(cat "$NAME")
-        CONF=${NAME/pub/conf}
+        CONF="${NAME%.pub}.conf"
         IP=$(awk '/Address/{print $3}' "$CONF"|awk -F/ '{print $1}')
         wg set wg0 peer "$PUB" allowed-ips "$IP"
     done
