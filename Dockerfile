@@ -35,7 +35,7 @@ COPY start /
 
 # Install WireGuard and dependencies
 # hadolint ignore=DL3008
-RUN apk add --no-cache wireguard-tools iptables net-tools libqrencode openresolv procps iproute2 grep
+RUN apk add --no-cache wireguard-tools iptables net-tools libqrencode openresolv procps iproute2 grep findutils
 
 # Entrypoint
 CMD [ "/start" ]
