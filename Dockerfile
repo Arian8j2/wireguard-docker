@@ -31,7 +31,7 @@ VOLUME /etc/wireguard
 
 # Copy tools
 WORKDIR /srv
-COPY start restart addclient clientcontrol /srv/
+COPY start addclient /srv/
 
 # Install WireGuard and dependencies
 # hadolint ignore=DL3008
