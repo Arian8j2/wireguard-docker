@@ -41,6 +41,7 @@ then
 PrivateKey = $CLIENT_KEY
 Address = $SUBNET.$C.$N/$SUBNET_PREFIX
 DNS = $DNS
+MTU = 1320
 
 [Peer]
 PublicKey = $SERV_PUB
