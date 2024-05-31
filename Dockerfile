@@ -36,7 +36,7 @@ COPY start addclient /srv/
 # Install WireGuard and dependencies
 # hadolint ignore=DL3008
 RUN chmod 755 /srv/* \
-    && apk add --no-cache wireguard-tools iptables inotify-tools net-tools libqrencode openresolv procps curl iproute2 grep
+    && apk add --no-cache wireguard-tools iptables net-tools libqrencode openresolv procps curl iproute2 grep
 
 HEALTHCHECK --interval=5s --timeout=5s CMD /sbin/ip -o li sh wg0 || exit 1
 

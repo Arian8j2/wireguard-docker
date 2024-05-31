@@ -72,9 +72,4 @@ finish () {
 }
 
 trap finish TERM INT QUIT
-
-while inotifywait -e modify -e create /etc/wireguard
-do
-    wg_down
-    wg_up
-done
+sleep infinity
